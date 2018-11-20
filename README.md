@@ -100,4 +100,4 @@
 
 - [如何 PR](docs/mixes/HowToContribute.md)
 
-Copyright 2017 gjmzj (jmgaozz@163.com) Apache License 2.0, 详情见 [LICENSE](docs/mixes/LICENSE) 文件。
+Copyright 2018 stone (169010000@qq.com) Apache License 2.0, 详情见 [LICENSE](docs/mixes/LICENSE) 文件。
