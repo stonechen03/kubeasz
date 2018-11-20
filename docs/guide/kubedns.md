@@ -57,13 +57,13 @@ nameserver 10.68.0.2
 search default.svc.cluster.local. svc.cluster.local. cluster.local.
 options ndots:5
 # 测试集群内部服务解析
-/ # nslookup nginx
+/ # nslookup nginx.default.svc.cluster.local
 Server:    10.68.0.2
 Address 1: 10.68.0.2 kube-dns.kube-system.svc.cluster.local
 
 Name:      nginx
 Address 1: 10.68.33.167 nginx.default.svc.cluster.local
-/ # nslookup kubernetes
+/ # nslookup kubernetes.default.svc.cluster.local
 Server:    10.68.0.2
 Address 1: 10.68.0.2 kube-dns.kube-system.svc.cluster.local
 
@@ -80,4 +80,4 @@ Address 2: 180.97.33.107
 / #
 ```
 
-[前一篇](index.md) -- [目录](index.md) -- [后一篇](dashboard.md)
+- Note: 使用``` kubectl run b1 -it --rm --image=alpine /bin/sh``` 进行```nslookup <svc>; nslookup <svc>.<namespace>```解析, busybox内的nslookup程序有bug, 详见 https://github.com/kubernetes/dns/issues/109
